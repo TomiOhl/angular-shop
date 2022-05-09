@@ -1,11 +1,8 @@
-teszt@gmail.com
-illaberek
-
 # PRF Shop
 
 ## Hosting
 
-The webapp is hosted under the following url: [https://prf-shop.web.app](https://prf-shop.web.app/details/1652114059)
+The webapp is hosted under the following url: [https://prf-shop.web.app](https://prf-shop.web.app)
 
 ## Running locally
 
@@ -28,6 +25,8 @@ Run `ng build` to build the project. The build artifacts will be stored in the `
 - 2 days before deadline: quick review of the course
 - 1 day before deadline: firebase auth, login, basic store component (list of items)
 - the final day: store component, details component with a comments section, buy feature, admin panel, designing everything and deploying to firebase
+
+Since I left this for the last minute the amount of time was the biggest obstacle. I did what I could. Another big barrier was the fact that it's not trivial to get a firebase document's auto-generated ID based on it's contents, and also that where clauses didn't want to work at first.
 
 ## Screenshots
 
