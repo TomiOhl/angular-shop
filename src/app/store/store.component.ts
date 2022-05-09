@@ -20,10 +20,7 @@ export class StoreComponent implements OnInit {
   refreshDb() {
     this.cloudElements = [];
     this.afs
-      .collection(
-        environment.collections.goods /*(ref) =>
-        ref.where('id', '==', 'valami').orderBy('value', 'desc')*/
-      )
+      .collection(environment.collections.goods)
       .get()
       .subscribe((res) => {
         res.docs.forEach((doc) => {
