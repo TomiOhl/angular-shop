@@ -11,10 +11,19 @@ import { environment } from 'src/environments/environment';
 export class AdminComponent implements OnInit {
   title = 'Store';
   orderItems: any[];
-  // dataObserver: Subscription | null = null;
+  inventory: any[];
 
   constructor(private router: Router, private afs: AngularFirestore) {
     this.orderItems = [];
+    this.inventory = [];
+  }
+
+  modifyItem(el: any) {
+    alert('TODO');
+  }
+
+  deleteItem(el: any) {
+    alert('TODO');
   }
 
   refreshDb() {
@@ -26,6 +35,17 @@ export class AdminComponent implements OnInit {
         res.docs.forEach((doc) => {
           const data = doc.data() as object;
           this.orderItems.push(data);
+        });
+      });
+
+    this.inventory = [];
+    this.afs
+      .collection(environment.collections.goods)
+      .get()
+      .subscribe((res) => {
+        res.docs.forEach((doc) => {
+          const data = doc.data() as object;
+          this.inventory.push(data);
         });
       });
   }

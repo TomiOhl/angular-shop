@@ -19,4 +19,17 @@
       </tr>
     </ng-container>
   </table>
+
+  <h2>Inventory management</h2>
+
+  <div *ngFor="let el of inventory">
+    {{ el.make }} {{ el.model }} <br />
+
+    <button (click)="modifyItem(el)">MODIFY</button>
+    <button (click)="deleteItem(el)">DELETE</button>
+
+    <hr
+      [style.display]="el == inventory[inventory.length - 1] ? 'none' : 'block'"
+    />
+  </div>
 </div>
