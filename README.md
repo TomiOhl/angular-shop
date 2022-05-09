@@ -32,8 +32,26 @@ Since I left this for the last minute the amount of time was the biggest obstacl
 
 ### Login
 
+Login with your data. This will only let you in if you provide a valid user's email and password.
+
+![Login page](screenshots/Login.png)
+
 ### Store
+
+List items. Click on them to see their details.
+![Main page](screenshots/Main.png)
 
 ### Details
 
+See others' comments and write your own. Click buy to create an order.
+![Details page](screenshots/Details.png)
+
+### Buy
+
+Order form: fill in the required data and click the blue button to confirm.
+![Buy form](screenshots/Buy.png)
+
 ### Admin page
+
+List all the buy orders on the page as well as the inventory. Manage them using buttons.
+![Admin page](screenshots/Admin.png)
