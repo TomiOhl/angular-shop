@@ -1,0 +1,22 @@
+<div class="content" role="main">
+  <h1>Admin panel</h1>
+
+  <h2>Order history</h2>
+  <!--address item name quantity-->
+  <table>
+    <tr>
+      <th>Item id</th>
+      <th>Quantity</th>
+      <th>Name</th>
+      <th>Address</th>
+    </tr>
+    <ng-container *ngFor="let group of orderItems">
+      <tr>
+        <td>{{ group.item }}</td>
+        <td>{{ group.quantity }}</td>
+        <td>{{ group.name }}</td>
+        <td>{{ group.address }}</td>
+      </tr>
+    </ng-container>
+  </table>
+</div>

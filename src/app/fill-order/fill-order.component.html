@@ -1,0 +1,22 @@
+<h1>Buy {{ displayData.make }} {{ displayData.model }}</h1>
+<div>
+  <div>
+    <label>Quantity</label>
+    <input
+      type="number"
+      placeholder="Number of items to buy"
+      [(ngModel)]="quantity"
+    />
+  </div>
+
+  <div>
+    <label>Name</label>
+    <input type="name" placeholder="Your name" [(ngModel)]="name" />
+  </div>
+
+  <div>
+    <label>Address</label>
+    <input type="text" placeholder="Your address" [(ngModel)]="address" />
+  </div>
+  <button (click)="saveOrder()">CONFIRM ORDER</button>
+</div>

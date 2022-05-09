@@ -1,0 +1,28 @@
+<div class="content" role="main">
+  <h1>{{ title }}</h1>
+
+  <nav>
+    <a [routerLink]="['/admin']">Admin panel</a> |
+    <a [routerLink]="['/login']">Logout</a>
+  </nav>
+
+  <main>
+    <div
+      *ngFor="let el of cloudElements"
+      [routerLink]="['/details', el.id]"
+      [state]="{ data: this.el }"
+    >
+      {{ el.make }} {{ el.model }} <br />
+      <hr
+        [style.display]="
+          el == cloudElements[cloudElements.length - 1] ? 'none' : 'block'
+        "
+      />
+    </div>
+  </main>
+
+  <footer>
+    <br />
+    <button (click)="refreshDb()">RELOAD</button>
+  </footer>
+</div>
